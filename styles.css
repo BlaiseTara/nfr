@@ -1,0 +1,146 @@
+:root{
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(0, 0, 0);
+    --secondary-color-transparent: rgba(0, 0, 0, 0.7);
+    --accent-color: rgb(255, 0, 183);
+    --accent-color-transparent: rgba(255, 0, 183, 0.4);
+    --background-color: rgb(28, 28, 28);
+    --text-color: rgb(255, 255, 255);
+    --font-family: 'Rubik', sans-serif;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+   
+    font-family: var(--font-family);
+    /*background-color: black;*/
+
+    /* Fullscreen background image */
+    background-image: url('background1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--text-color);
+}
+
+header {
+    /* Keep this for the overall header styling */
+    background-color: var(--secondary-color-transparent);
+    border-bottom: 2px solid var(--accent-color);
+    width: 100%;
+    padding-left: 10px;
+}
+
+.header-content {
+    /* This will put the h1 and p elements side by side */
+    display: flex;
+    align-items: center; /* This centers the items vertically */
+    gap: 1rem;
+}
+
+.front-page {
+    padding: 20px;
+    min-height: 90vh; /* Ensures the main content takes up at least 80% of the viewport height */
+}
+
+.arranged-options {
+    display: flex;
+    gap: 1rem; /* Use a relative unit for consistent spacing */
+    justify-content: center;
+    align-items: stretch; /* Ensures all boxes have the same height */
+    margin: 2rem auto;
+    max-width: 800px; /* Limits the container width */
+}
+
+.box {
+    flex: 1;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--font-family);
+    padding: 10px;
+    background-color: var(--secondary-color-transparent);
+    color: var(--primary-color);
+}
+
+.box h{
+    font-weight: bold;
+}
+
+.box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px var(--accent-color-transparent);
+}
+
+.screenshot-group {
+    display: flex;
+    flex-direction: column; /* Stacks the containers vertically */
+    gap: 20px; /* Creates a 20px gap between the children */
+
+    padding-bottom: 100px;
+}
+
+.screenshot-container {
+    border: 2px solid var(--accent-color);
+    background-color: var(--secondary-color-transparent);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.screenshot-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.screenshot-container img {
+    max-width: 50%;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.screenshot-container p {
+    text-align: left;
+    padding: 0 10px;
+}
+
+.screenshot-container:nth-child(even) p {
+    text-align: right;
+}
+
+.discord-widget {
+    border: 2px solid var(--accent-color);
+    background-color: var(--secondary-color-transparent);
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.discord-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px var(--accent-color-transparent);
+}
+
+.discord-widget-link img{
+    display: block;
+}
+
+footer {
+    background-color: var(--secondary-color-transparent);
+    border-top: 2px solid var(--accent-color);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+} 
